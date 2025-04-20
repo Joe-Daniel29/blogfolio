@@ -18,7 +18,7 @@ class BlogPostCreate(BaseModel):
     title: str
     content: str
 
-POSTS_FILE = "posts.json"
+POSTS_FILE = os.path.dirname(__file__)+"/posts.json"
 
 if not os.path.exists(POSTS_FILE):
     with open(POSTS_FILE, "w") as f:
