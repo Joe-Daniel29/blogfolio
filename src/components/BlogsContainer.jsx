@@ -12,7 +12,7 @@ const BlogsContainer = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/posts");
+        const response = await fetch("https://api.joe.sputh.me/posts");
         if (!response.ok) {
           throw new Error("Failed to fetch posts");
         }
