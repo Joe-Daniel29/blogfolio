@@ -3,10 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import json
 import os
-import secrets
 
 app = FastAPI()
-
 
 app.add_middleware(
     CORSMiddleware,
@@ -37,9 +35,7 @@ def write_posts(posts):
 @app.post("/posts")
 def create_post(post: BlogPostCreate):
     posts = read_posts()
-    token = secrets.token_hex(8)  
-    while any(p["token"] == token for p in posts):  # Ensure uniqueness
-        token = secrets.token_hex(8)
+    token = f"blog{len(posts) + 1}"
     
     new_post = {
         "token": token,
