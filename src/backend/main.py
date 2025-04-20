@@ -7,12 +7,17 @@ import os
 app = FastAPI()
 
 app.add_middleware(
+    TrustedHostMiddleware, allowed_hosts=["api.joe.sputh.me"]
+)
+
+app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://joe.sputh.me/"],  
+    allow_origins=["https://joe.sputh.me/",https://www.joe.sputh.me/"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 class BlogPostCreate(BaseModel):
     title: str
