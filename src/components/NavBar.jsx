@@ -13,13 +13,13 @@ const NavBar = () => {
         justifyContent: "space-evenly",
       }}
     >
-      <Link to="/blogs" style={{ marginRight: "10px" }}>
+      <Link to="/" style={{ marginRight: "10px" }}>
         Blogs
       </Link>
       <Link to="/about" style={{ marginRight: "10px" }}>
         About
       </Link>
-      <Link to="/" style={{ marginRight: "10px" }}>
+      <Link to="/contact" style={{ marginRight: "10px" }}>
         Contact
       </Link>
     </nav>
