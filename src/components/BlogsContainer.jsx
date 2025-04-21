@@ -46,7 +46,7 @@ const BlogsContainer = () => {
         padding: "15px",
       }}
     >
-      <h2>Blog Posts</h2>
+      <h2>Anshul is a bad boy</h2>
 
       {posts.length === 0 ? (
         <div>No posts available</div>
