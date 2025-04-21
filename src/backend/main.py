@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 import json
 import os
-import regex as re
+import re
 app = FastAPI()
 
 app.add_middleware(
