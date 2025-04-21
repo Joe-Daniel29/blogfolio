@@ -66,12 +66,13 @@ def get_post(token: str):
             return post
     raise HTTPException(status_code=404, detail="Post not found")
 
-@app.post("/submit")
-async def submit(name: str = Form(...) ,email:str = Form(...), message:str =Form(...)):
-    print("submitted")
-    return {'name': name, 'email' : email, 'message':message }
-
 @app.get("/upgradev")
 def upgrade():
     path = re.findall(r"(.+(?:\\|/)blogfolio).+", __file__)[0]
     os.system("cd "+path+" && git reset --hard origin/main && git pull && npm run build && systemctl restart joeblogfolio")
+
+
+@app.post("/submit")
+async def submit(name: str = Form(...) ,email:str = Form(...), message:str =Form(...)):
+    print("submitted")
+    return {'name': name, 'email' : email, 'message':message }
