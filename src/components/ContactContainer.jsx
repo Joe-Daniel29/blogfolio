@@ -8,10 +8,6 @@ const ContactContainer = () => {
   async function postData(url = "https://api.joe.sputh.me/submit", data = {}) {
     setStatus("submitting");
     try {
-      const formData = new FormData();
-      formData.append("name", data.name);
-      formData.append("email", data.email);
-      formData.append("message", data.message);
       const response = await fetch(url, {
         method: "POST",
 
