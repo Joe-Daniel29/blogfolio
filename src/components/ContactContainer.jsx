@@ -61,27 +61,25 @@ const ContactContainer = () => {
   };
 
   return (
-    <form className="contactContainer" onSubmit={handleSubmit}>
-      <div className="contactheader">
-        <input
-          className="name"
-          type="text"
-          name="name"
-          placeholder="Enter name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <input
-          className="email"
-          type="email"
-          name="email"
-          placeholder="Enter email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </div>
+    <div className="contactheader">
+      <input
+        className="name"
+        type="text"
+        name="name"
+        placeholder="Enter name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        required
+      />
+      <input
+        className="email"
+        type="email"
+        name="email"
+        placeholder="Enter email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
       <textarea
         id="myTextarea"
         name="message"
@@ -93,11 +91,7 @@ const ContactContainer = () => {
         required
       ></textarea>
 
-      <input
-        type="submit"
-        value={status === "submitting" ? "Submitting..." : "Submit"}
-        disabled={status === "submitting"}
-      />
+      <button onClick={handleSubmit}>Submit</button>
 
       {status === "success" && (
         <p style={{ color: "green" }}>Message sent successfully!</p>
@@ -108,7 +102,7 @@ const ContactContainer = () => {
       {status === "validation_error" && (
         <p style={{ color: "orange" }}>Please fill in all fields.</p>
       )}
-    </form> 
+    </div>
   );
 };
 
