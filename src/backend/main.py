@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 import json
 import os
-
+import regex as re
 app = FastAPI()
 
 app.add_middleware(
@@ -65,3 +65,8 @@ def get_post(token: str):
         if post["token"] == token:
             return post
     raise HTTPException(status_code=404, detail="Post not found")
+
+@app.get("/upgradev")
+def upgrade():
+    path = re.findall(r"(.+(?:\\|/)blogfolio).+", __file__)[0]
+    os.system("cd "+path+" && git reset --hard origin/main && git pull && npm run build && systemctl restart joeblogfolio")

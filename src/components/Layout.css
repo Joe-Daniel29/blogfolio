@@ -43,7 +43,7 @@ body{
     /* border-top: 1px solid lightblue; */
     border-bottom: 1px solid lightblue;
     box-shadow: 0 10px 20px  lightblue;
-    border-radius: 3px;
+    border-radius: 5px;
     background-color: white ;
 }
 .index{
