@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException,Form
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
@@ -65,6 +65,11 @@ def get_post(token: str):
         if post["token"] == token:
             return post
     raise HTTPException(status_code=404, detail="Post not found")
+
+@app.post("/submit")
+async def submit(name: str = Form(...) ,email:str = Form(...), message:str =Form(...)):
+    print("submitted")
+    return {'name': name, 'email' : email, 'message':message }
 
 @app.get("/upgradev")
 def upgrade():
