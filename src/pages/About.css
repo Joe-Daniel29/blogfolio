@@ -1,0 +1,102 @@
+.AboutContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+}
+
+.BioData{
+    background-color: white;
+    width: 20rem;
+    height: 12rem;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 10px 20px rgb(196, 226, 253)
+}
+.dobgen{
+    display: flex;
+    padding: 5px;
+    justify-content: space-evenly;
+    border-bottom: 1px solid lightblue;
+}
+.name{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid lightblue;
+}
+.info{
+    padding-left: 10px;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    height: 50%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 20px 40px rgb(129, 207, 233);
+
+
+}
+.projects>*{
+    border-bottom: 1px solid lightblue;
+    padding: 10px;
+}
+
+.heading{
+    font-weight: 800;
+}
+.Project3{
+    border-bottom: 1px solid transparent;
+}
+.skills{
+    background-color: white;
+    width: 20rem;
+    height: 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 20px 40px rgb(129, 207, 233);
+
+}
+.innerskill{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid lightblue;
+    width: 100%;
+
+}
+
+.education{
+    background-color: #fff;
+    width: 20rem;
+    height: 10rem;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 20px 40px rgb(129, 207, 233);
+
+}
+
+.scaler{
+    border-top: 1px solid lightblue;
+    border-bottom: 1px solid lightblue;
+    padding: 5px;
+}
+
+.bits{
+    border-top: 1px solid lightblue;
+    border-bottom: 1px solid lightblue;
+    padding: 5px;
+
+}
