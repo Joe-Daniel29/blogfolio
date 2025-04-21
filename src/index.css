@@ -1,10 +1,10 @@
 body{
     background-image: -webkit-linear-gradient(65deg, rgb(255, 255, 255),rgb(192, 238, 253),white);
     /* background-image: -webkit-linear-gradient(65deg, rgb(255, 0, 0),rgb(190, 229, 242)); */
-    height: 140%;
+    height: 135%;
     width: 100%;
 }
 html{
-    height: 140%;
+    height: 135%;
     width: 100%;
 }

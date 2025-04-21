@@ -5,14 +5,27 @@
     align-items: center;
     gap:15px;
 }
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 
+}
 .BioData{
     background-color: white;
-    width: 20rem;
+    width: 21rem;
     height: 12rem;
     border-radius: 10px;
     margin-top: 15px;
-    box-shadow: 0 10px 20px rgb(196, 226, 253)
+    box-shadow: 0 20px 40px rgb(129, 207, 233);
+
 }
 .dobgen{
     display: flex;
@@ -35,7 +48,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 20rem;
+    width: 21rem;
     height: 50%;
     border-radius: 10px;
     background-color: white;
@@ -45,8 +58,15 @@
 }
 .projects>*{
     border-bottom: 1px solid lightblue;
+    border-top: 1px solid lightblue;
     padding: 10px;
 }
+.projects>h2{
+    border-top: 1px solid transparent;
+
+    border-bottom: 1px solid transparent;
+}
+
 
 .heading{
     font-weight: 800;
@@ -98,5 +118,25 @@
     border-top: 1px solid lightblue;
     border-bottom: 1px solid lightblue;
     padding: 5px;
+
+}
+
+@media (min-width: 1000px ) {
+    .AboutContainer{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+    .right{
+        margin-top: 15px;
+        width: 40rem;
+    }
+    .projects{
+        width: 40rem;
+    }
+    .skills{
+        width: 39rem;
+    }
+
 
 }
