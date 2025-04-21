@@ -79,5 +79,5 @@ def upgrade():
 
 
 @app.post("/submit")
-async def getContact(contact_data: ContactForm):
+async def getContact(contact_data: contactForm):
     return {'name': contact_data.name, 'email' : contact_data.email, 'message': contact_data.message}
