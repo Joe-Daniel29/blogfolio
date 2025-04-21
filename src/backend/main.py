@@ -26,6 +26,12 @@ class BlogPostCreate(BaseModel):
     title: str
     content: str
 
+class contactForm(BaseModel):
+    name: str
+    email: str
+    message: str
+
+
 POSTS_FILE = os.path.dirname(__file__)+"/posts.json"
 
 if not os.path.exists(POSTS_FILE):
@@ -73,6 +79,5 @@ def upgrade():
 
 
 @app.post("/submit")
-async def submit(name: str = Form(...) ,email:str = Form(...), message:str =Form(...)):
-    print("submitted")
-    return {'name': name, 'email' : email, 'message':message }
+async def getContact(contact_data: ContactForm):
+    return {'name': contact_data.name, 'email' : contact_data.email, 'message': contact_data.message}
