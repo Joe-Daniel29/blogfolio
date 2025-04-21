@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import BlogCard from "./BlogCard";
 
 const BlogsContainer = () => {
-  // State to store the fetched blog posts
   const [posts, setPosts] = useState([]);
-  // State to handle loading and errors
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -13,6 +11,8 @@ const BlogsContainer = () => {
     const fetchPosts = async () => {
       try {
         const response = await fetch("https://api.joe.sputh.me/posts");
+        // const response = await fetch("http://127.0.0.1:8000/posts");
+
         if (!response.ok) {
           throw new Error("Failed to fetch posts");
         }
@@ -28,26 +28,26 @@ const BlogsContainer = () => {
     fetchPosts();
   }, []); // Empty dependency array means this runs once on mount
 
-  // Render loading state
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  // Render error state
   if (error) {
     return <div>Error: {error}</div>;
   }
 
-  // Render blog posts
   return (
     <div
       style={{
         display: "flex",
         flexDirection: "column",
-        gap: "5px",
+        gap: "15px",
         marginTop: "10px",
+        padding: "15px",
       }}
     >
+      <h2>Blog Posts</h2>
+
       {posts.length === 0 ? (
         <div>No posts available</div>
       ) : (

@@ -4,22 +4,14 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <nav
-      style={{
-        display: "flex",
-        borderRadius: "10px",
-        backgroundColor: "lightblue",
-        padding: "10px",
-        alignItems: "center",
-        justifyContent: "space-evenly",
-      }}
     >
-      <Link to="/" style={{ marginRight: "10px" }}>
+      <Link to="/" style={{ marginRight: "10px", fontWeight:"bold",color: 'white'}}>
         Blogs
       </Link>
-      <Link to="/about" style={{ marginRight: "10px" }}>
+      <Link to="/about" style={{ marginRight: "10px", fontWeight:"bold", color: 'white'}}>
         About
       </Link>
-      <Link to="/contact" style={{ marginRight: "10px" }}>
+      <Link to="/contact" style={{ marginRight: "10px", fontWeight:"bold",color: 'white' }}>
         Contact
       </Link>
     </nav>

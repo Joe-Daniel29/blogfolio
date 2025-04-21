@@ -5,7 +5,6 @@ const Blogs = () => {
   return (
     
     <>
-      <h1>Blog Posts</h1>
       <BlogsContainer />
     </>
   );
