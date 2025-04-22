@@ -1,44 +1,42 @@
 import React, { useState } from "react";
+
 const ContactContainer = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [status, setStatus] = useState(""); 
+  const [status, setStatus] = useState("");
 
   async function postData(url = "https://api.joe.sputh.me/submit", data = {}) {
     setStatus("submitting");
-    console.log("Sending data:", data); 
+    console.log("Sending data:", data);
 
     try {
       const response = await fetch(url, {
         method: "POST",
-        headers: { 
+        headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       });
 
-    
       if (!response.ok) {
-        console.log("Error")
-        
+        console.log("Error");
       }
 
-      const result = await response.json(); 
+      const result = await response.json();
       setStatus("success");
       console.log("Success:", result);
       setName("");
       setEmail("");
       setMessage("");
       return result;
-
     } catch (error) {
       setStatus("error");
       console.error("Error posting data:", error);
       throw error;
     } finally {
-       if (status === "submitting") {
-       }
+      if (status === "submitting") {
+      }
     }
   }
 
@@ -58,11 +56,11 @@ const ContactContainer = () => {
     };
 
     postData("https://api.joe.sputh.me/submit", formData)
-      .then(data => {
+      .then((data) => {
         console.log("Form submitted successfully", data);
       })
-      .catch(error => {
-         console.error("Form submission failed", error);
+      .catch((error) => {
+        console.error("Form submission failed", error);
       });
   };
 
@@ -76,11 +74,11 @@ const ContactContainer = () => {
           placeholder="Enter name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          required 
+          required
         />
         <input
           className="email"
-          type="email" 
+          type="email"
           name="email"
           placeholder="Enter email"
           value={email}
@@ -99,22 +97,20 @@ const ContactContainer = () => {
         required
       ></textarea>
 
-      <button
-         onClick={handleSubmit}
-         disabled={status === 'submitting'}
-      >
-         {status === 'submitting' ? 'Submitting...' : 'Submit'}
+      <button onClick={handleSubmit} disabled={status === "submitting"}>
+        {status === "submitting" ? "Submitting..." : "Submit"}
       </button>
-
-      {status === "success" && (
-        <p style={{ color: "green" }}>Message sent successfully!</p>
-      )}
-      {status === "error" && (
-        <p style={{ color: "red" }}>An error occurred. Please try again.</p>
-      )}
-      {status === "validation_error" && (
-        <p style={{ color: "orange" }}>Please fill in all fields.</p>
-      )}
+      <div className="status">
+        {status === "success" && (
+          <p style={{ color: "green" }}>Message sent successfully!</p>
+        )}
+        {status === "error" && (
+          <p style={{ color: "red" }}>An error occurred. Please try again.</p>
+        )}
+        {status === "validation_error" && (
+          <p style={{ color: "orange" }}>Please fill in all fields.</p>
+        )}
+      </div>
     </div>
   );
 };

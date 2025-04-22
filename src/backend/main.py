@@ -5,6 +5,7 @@ from fastapi.middleware.trustedhost import TrustedHostMiddleware
 import json
 import os
 import re
+import subprocess
 app = FastAPI()
 
 app.add_middleware(
@@ -80,4 +81,7 @@ def upgrade():
 
 @app.post("/submit")
 async def getContact(contact_data: contactForm):
-    return {'name': contact_data.name, 'email' : contact_data.email, 'message': contact_data.message}
+    sender_name = contact_data.name
+    message_body = contact_data.message
+    subject = "You recieved a response from"+contact_data.email
+    subprocess.run(['postbird', '-f', 'joe@sputh.me', '-t', 'very.joe.daniel@gmail.com', '-t', 'joe.24@scaler email whatever', '-n', sender_name, '-s', subject, '-m', message_body])
