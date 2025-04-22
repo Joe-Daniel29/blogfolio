@@ -83,5 +83,6 @@ def upgrade():
 async def getContact(contact_data: contactForm):
     sender_name = contact_data.name
     message_body = contact_data.message
-    subject = "You recieved a response from"+contact_data.email
+    subject = "You recieved a response from: "+contact_data.email
     subprocess.run(['postbird', '-f', 'joe@sputh.me', '-t', 'very.joe.daniel@gmail.com', '-t', 'joe.24@scaler email whatever', '-n', sender_name, '-s', subject, '-m', message_body])
+    subprocess.run(['postbird', '-f', 'joe@sputh.me', '-t', contact_data.email, '-n', sender_name, '-s', subject, '-m', "Thank you for reaching out!"])
