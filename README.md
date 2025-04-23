@@ -1,12 +1,74 @@
-# React + Vite
+Blogfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+joe.sputh.me
 
-Currently, two official plugins are available:
+### Blogfolio is my personal portfolio website that integrates a blog, an about page, and a contact form. It allows me to share my thoughts through blog posts, showcase their skills and experiences on the about page, and provide a convenient way for visitors to get in touch via the contact form. The backend is powered by FastAPI, ensuring a modern, efficient, and scalable API-driven architecture.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+Blog Posts: Create, read, update, and delete blog posts to share your thoughts and updates.
+About Page: Display personal information, skills, experiences, or project highlights.
+Contact Form: Enable visitors to send messages directly from the website.
+Backend API: Built with FastAPI for high-performance backend services.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+Backend: FastAPI (Python)
+Frontend: React+Vite
+Database:JSON file hosted at a private VPS
+Other Tools: sputh.me mail service API
+
+
+to access the website : joe.sputh.me
+api: api.joe.sputh.me
+
+Setup Instruction(for development)
+
+Backend Setup
+
+Clone the repository:
+git clone https://github.com/yourusername/blogfolio.git
+cd blogfolio/backend
+
+
+Create and activate a virtual environment:
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+
+
+Install dependencies:
+pip install -r requirements.txt
+
+
+Run the FastAPI server:
+uvicorn main:app --reload
+
+
+
+Frontend Setup
+[If your project includes a separate frontend, provide the following steps. Otherwise, adjust accordingly.]
+
+Navigate to the frontend directory:
+cd ../frontend
+
+
+Install dependencies:
+npm install 
+
+
+Run the development server:
+npm run dev 
+
+
+Screenshots
+[Optional but recommended: Include screenshots to give a visual overview of your project.]
+
+Homepage
+
+Blog Post
+
+About Page
+
+Contact Form
+
+
