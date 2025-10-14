@@ -60,15 +60,3 @@ Run the development server:
 npm run dev 
 
 
-Screenshots
-[Optional but recommended: Include screenshots to give a visual overview of your project.]
-
-Homepage
-
-Blog Post
-
-About Page
-
-Contact Form
-
-
