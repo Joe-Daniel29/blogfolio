@@ -2,7 +2,7 @@ Blogfolio
 
 joe.sputh.me
 
-### Blogfolio is my personal portfolio website that integrates a blog, an about page, and a contact form. It allows me to share my thoughts through blog posts, showcase their skills and experiences on the about page, and provide a convenient way for visitors to get in touch via the contact form. The backend is powered by FastAPI, ensuring a modern, efficient, and scalable API-driven architecture.
+Blogfolio is my personal portfolio website that integrates a blog, an about page, and a contact form. It allows me to share my thoughts through blog posts, showcase their skills and experiences on the about page, and provide a convenient way for visitors to get in touch via the contact form. The backend is powered by FastAPI, ensuring a modern, efficient, and scalable API-driven architecture.
 
 ## Features
 
@@ -22,7 +22,7 @@ Other Tools: sputh.me mail service API
 to access the website : joe.sputh.me
 api: api.joe.sputh.me
 
-Setup Instruction(for development)
+Setup Instruction (for development)
 
 Backend Setup
 
