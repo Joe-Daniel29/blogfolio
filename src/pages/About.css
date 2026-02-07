@@ -24,7 +24,8 @@
     height: 12rem;
     border-radius: 10px;
     margin-top: 15px;
-    box-shadow: 0 20px 40px rgb(129, 207, 233);
+    /* box-shadow: 0 20px 40px rgb(129, 207, 233); */
+    padding: 10px;
 
 }
 .dobgen{
@@ -52,7 +53,7 @@
     height: 50%;
     border-radius: 10px;
     background-color: white;
-    box-shadow: 0 20px 40px rgb(129, 207, 233);
+    /* box-shadow: 0 20px 40px rgb(129, 207, 233); */
 
 
 }
@@ -76,13 +77,13 @@
 .skills{
     background-color: white;
     width: 20rem;
-    height: 14rem;
+    height: 16rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 0 20px 40px rgb(129, 207, 233);
+    /* box-shadow: 0 20px 40px rgb(129, 207, 233); */
 
 }
 .innerskill{
@@ -100,12 +101,13 @@
 .education{
     background-color: #fff;
     width: 20rem;
-    height: 10rem;
+    height: 12rem;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 20px 40px rgb(129, 207, 233);
+    /* box-shadow: 0 20px 40px  rgb(129, 207, 233); */
+    padding: 10px;
     width: 100%;
     
 
@@ -115,7 +117,7 @@
     border-top: 1px solid lightblue;
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     width: 100%;
 }
 
@@ -123,7 +125,7 @@
     border-top: 1px solid lightblue;
     padding-top: 5px;
     width: 100%;
-    padding-left: 10px;
+    /* padding-left: 10px; */
 
 }
 

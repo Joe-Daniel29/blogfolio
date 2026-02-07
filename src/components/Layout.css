@@ -1,19 +1,24 @@
 *{
-  font-family: "Lora", serif;
-  font-weight: 500;
-  font-style: normal;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;/* font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
  }
 
 h2{
-  font-family: "Lora", serif;
-  font-weight: 1000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   font-style: normal;
 
 }
-nav{
 
+nav{
+    width: 25rem;
+    /* height: 2rem; */
     display: flex;
-    background-color:rgb(6, 72, 119);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    /* box-shadow: 1px -1px rgba(255, 255, 255, 0.467) ; */
+    background-color:rgba(255, 255, 255, 0.586);
+    border-radius: 2rem;
     padding: 10px;
     align-items: center;
     justify-content: space-evenly;
@@ -26,25 +31,35 @@ body{
 }
 
 .title{
-  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  /* font-weight: bold; */
 }
 
 .teaser{
   font-weight: normal;
+
 }
 
 
 .blogCard{
-    height: 3rem;
+  /* font-size: 1; */
+    /* height: rem; */
+    
     display: flex;
     flex-direction: column; 
-    justify-content: space-between;
-    padding: 5px;
+    
+    /* justify-content: space-between; */
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     /* border-top: 1px solid lightblue; */
-    border-bottom: 1px solid lightblue;
-    box-shadow: 0 10px 20px  lightblue;
-    border-radius: 5px;
-    background-color: white ;
+    /* border-bottom: 1px solid lightblue; */
+    border: 1px solid white;
+    /* box-shadow: 0 10px 20px  lightblue; */
+    /* border-radius: 5px; */
+    background-color: rgba(255, 255, 255, 0.681) ; 
 }
 .index{
     display: flex;
@@ -59,8 +74,8 @@ a {
   
 
 .blogCard:hover{
-  background-color: rgb(250, 254, 255);
-  scale: 1.009;
+  background-color: rgb(255, 255, 255);
+  /* scale: 1.009; */
   
 }
 
