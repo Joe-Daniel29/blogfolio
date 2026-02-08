@@ -41,9 +41,9 @@ const BlogsContainer = () => {
       style={{
         display: "flex",
         flexDirection: "column",
-        gap: "15px",
+        gap: "2px",
         marginTop: "10px",
-        padding: "15px",
+        padding: "1rem",
       }}
     >
       <h2>Blog Posts</h2>

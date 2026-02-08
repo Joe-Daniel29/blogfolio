@@ -5,8 +5,11 @@ import "./Layout.css"
 const Layout = () => {
   return (
     <>
-      <NavBar />
+      
       <Outlet />
+      <div style={{position: "fixed", bottom: "2rem", display: "flex", justifyContent: "center" , width: "100%"}}>
+      <NavBar />  
+      </div>
     </>
   );
 };
